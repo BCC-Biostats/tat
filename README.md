@@ -16,7 +16,7 @@ size](https://img.shields.io/github/repo-size/BCC-Biostats/tat)
 ## Overview
 
 tat is a package for holding my analysis tools for creating
-biostatistics reports/
+biostatistics reports
 
 ## Installation
 
