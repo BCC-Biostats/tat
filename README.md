@@ -1,5 +1,5 @@
 
-# tat <a href="https://github.com/BCC-Biostats/tat"><img src="man/figures/tathex.png" align="right" height="138" /></a>
+# Tyler’s Analysis Tools <a href="https://github.com/BCC-Biostats/tat"><img src="man/figures/tathex.png" align="right" height="138" /></a>
 
 [![License:
 MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
