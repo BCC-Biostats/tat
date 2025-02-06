@@ -15,8 +15,11 @@ size](https://img.shields.io/github/repo-size/BCC-Biostats/tat)
 
 ## Overview
 
-tat is a package for holding my analysis tools for creating
-biostatistics reports
+tat is a package for holding my biostatistics analysis tools. Currently
+has 2 parts:
+
+- Claims Data
+- Survival Analysis
 
 ## Installation
 
@@ -26,3 +29,31 @@ To install the package, run the following commands:
 if (!require("remotes")) install.packages("remotes")
 remotes::install_github("BCC-Biostats/tat")   
 ```
+
+## Claims Data
+
+### *cd_find_ids()*: Find codes in a claims data set across several columns
+
+This function will help you find if a code is present in a claims data
+set across several columns. It will return a tibble with a list column
+of the codes found and a logical column indicating if any of the codes
+were found.
+
+Example:
+
+``` r
+#' dat <- tibble(
+#'   id = 1:3,
+#'   code1 = c("A", "B", "C"),
+#'   code2 = c("B", "C", "D")
+#' )
+#' cd_find_ids(dat, c("code1", "code2"), c("A", "B"))
+#' # A tibble: 3 x 2
+#' # codes_found any_codes
+#' # <list>      <lgl>
+#' # 1 <chr [1]>   TRUE
+#' # 2 <chr [1]>   TRUE
+#' # 3 <chr [0]>   FALSE
+```
+
+## Survival Analysis

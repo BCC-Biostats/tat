@@ -1,5 +1,3 @@
-
-
 km_table <- function(data, times, formula, time_units = 1) {
   # Perform KM fit
   km_fit <- survfit(formula = formula, data = data)
@@ -30,7 +28,7 @@ km_table <- function(data, times, formula, time_units = 1) {
   # Reverse KM fit (if applicable)
   rev_km <- survfit(
     formula = update(formula, . ~ .),
-    data = data |> mutate(across(where(is.numeric), ~ ./time_units))
+    data = data |> mutate(across(where(is.numeric), ~ . / time_units))
   )
 
   reverse_km_table <- summary(rev_km)$table |>
